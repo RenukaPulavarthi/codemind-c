@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int a,i,sq,s=0,b;
+    int a,sq,b,i,s=0;
     scanf("%d",&a);
     sq=a*a;
     for(i=sq;i>0;)
@@ -11,7 +11,7 @@ int main()
         i=i/10;
     }
     if(a==s)
-       printf("Neon Number");
+      printf("Neon Number");
     else
-       printf("Not Neon Number");
+      printf("Not Neon Number");
 }
