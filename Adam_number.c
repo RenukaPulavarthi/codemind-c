@@ -1,24 +1,25 @@
 #include<stdio.h>
 int main()
 {
-    int a,i,b,c,sq,d,s=0,r=0;
+    int a,i,b,c,t,s=0,x=0,sq;
     scanf("%d",&a);
-    b=a*a;
+    sq=a*a;
     for(i=a;i>0;)
     {
-        c=i%10;
-        s=s*10+c;
+        b=i%10;
+        s=(s*10)+b;
         i=i/10;
     }
-    sq=s*s;
-    for(i=sq;i>0;)
+    t=s*s;
+     for(i=t;i>0;)
     {
-        d=i%10;
-        r=r*10+d;
+        c=i%10;
+        x=(x*10)+c;
         i=i/10;
     }
-    if(b==r)
+    if(sq==x)
       printf("True");
     else
-      printf("False");
+       printf("False");
+    
 }
