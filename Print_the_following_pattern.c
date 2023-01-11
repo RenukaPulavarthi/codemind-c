@@ -3,11 +3,18 @@ int main()
 {
     int a,i,j;
     scanf("%d",&a);
-    for(i=1;i<=a;i++)
+    for(i=a;i>0;i--)
     {
-        for(j=i;j<=a;j++)
+        for(j=a;j>0;j--)
         {
-            printf("%d ",j);
+            if(j==i||j==a-i+1)
+            {
+                printf("%d ",i);
+            }
+            else
+              {
+                  printf(" ");
+              }
         }
         printf("
 ");
