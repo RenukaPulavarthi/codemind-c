@@ -1,0 +1,45 @@
+#include<stdio.h>
+#include<math.h>
+bool po(int n)
+{
+    int i;
+    for(i=0;i<=n;i++)
+    {
+        if(pow(2,i)==n)
+            return true;
+    }
+    return false;
+}
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    if (po(n))
+    {
+        printf("0");
+    }
+    else{
+        int i,p=0,ne=0,m=n+1;
+        for(i=n-1;i>=0;i--)
+        {
+            if (po(i))
+            {
+                p=i;
+                break;
+            }
+        }
+        while(m)
+        {
+            if(po(m))
+            {
+                ne=m;
+                break;
+            }
+            m+=1;
+        }
+        if(ne-n <= n-p)
+            printf("%d",ne-n);
+        else
+           printf("%d",n-p);
+    }
+}
