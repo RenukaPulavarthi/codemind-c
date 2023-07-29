@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main()
+{
+    int n,i;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        int m,j,su=0;
+        scanf("%d",&m);
+        int s=m*(m+1)/2;
+        for(j=1;j<m;j++)
+        {
+            int l;
+            scanf("%d",&l);
+            su+=l;
+        }
+        printf("%d\n",s-su);
+    }
+}
