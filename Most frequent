@@ -1,0 +1,41 @@
+#include<stdio.h>
+int count(int *a,int k,int n)
+{
+    int i,c=0;
+    for(i=0;i<n;i++)
+    {
+        if(a[i]==k)
+        {
+            c++;
+        }
+    }
+    return c;
+}
+int main()
+{
+    int n,i;
+    scanf("%d",&n);
+    int a[n];
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    int num=a[0];
+    int max=count(a,a[0],n);
+    for(i=0;i<n;i++)
+    {
+        if(count(a,a[i],n)==max)
+        {
+            if(num>a[i])
+            {
+                num=a[i];
+            }
+        }
+        else if(count(a,a[i],n)>max)
+        {
+            max=count(a,a[i],n);
+            num=a[i];
+        }
+    }
+    printf("%d",num);
+}
