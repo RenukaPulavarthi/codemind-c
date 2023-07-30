@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{ 
+    int n,i,c=0,s=0,re;
+    scanf("%d",&n);
+    for(i=n;i>0;)
+    {
+        re=i%10;
+        s+=re*pow(8,c);
+        c++;
+        i=i/10;
+    }
+    printf("%d",s);
+}
